@@ -356,7 +356,29 @@ namespace Groupproject1
         //button chuyen cong tru
         private void btncongtru_Click(object sender, EventArgs e)
         {
+            double value = double.Parse(mangduoi.Text);
+            value = -value;
+            mangduoi.Text = value.ToString();
+        }
 
+        private void btncham_Click(object sender, EventArgs e)
+        {          
+                   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn1chiax_Click(object sender, EventArgs e)
+        {
+            double value = double.Parse(mangduoi.Text);
+
+            double result = 1 / value;
+
+            mangduoi.Text = result.ToString();
+            history.Text += $"1/{value} = {result}\n";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
