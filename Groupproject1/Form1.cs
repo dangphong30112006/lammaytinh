@@ -244,30 +244,76 @@ namespace Groupproject1
             isNegative = false;
         }
         //button %
+        /* private void btnphantram_Click(object sender, EventArgs e)
+         {
+             if (mangduoi.Text.Length > 0)
+             {
+                 // neu dang hien % thi chuyen ve decimal
+                 if (mangduoi.Text.EndsWith("%"))
+                 {
+                     string numStr = mangduoi.Text.TrimEnd('%');
+                     data1 = float.Parse(numStr) / 100;
+                     mangiua.Text = numStr + "% to dec =";
+                     mangduoi.Text = data1.ToString();
+                     isPercent = true;
+                 }
+                 // chua hien % thi chuyen sang %
+                 else
+                 {
+                     data1 = float.Parse(mangduoi.Text);
+                     data2 = data1 * 100;
+                     mangiua.Text = data1.ToString() + " to % =";
+                     mangduoi.Text = data2.ToString() + "%";
+                     isPercent = true;
+                 }
+             }
+         }
+        
+        //button %
+
+private void btnphantram_Click(object sender, EventArgs e)
+{
+    if (mangduoi.Text.Length > 0)
+    {
+        try
+        {
+            data1 = float.Parse(mangduoi.Text);
+
+            // Chuyển số hiện tại thành phần trăm (chia cho 100)
+            data2 = data1 / 100;
+            mangiua.Text = data1.ToString() + " % =";
+            mangduoi.Text = data2.ToString();
+        }
+        catch (FormatException)
+        {
+            mangtren.Text = "Lỗi: Đầu vào không hợp lệ!";
+        }
+    }
+}*/
+        //button %
         private void btnphantram_Click(object sender, EventArgs e)
         {
             if (mangduoi.Text.Length > 0)
             {
-                // neu dang hien % thi chuyen ve decimal
-                if (mangduoi.Text.EndsWith("%"))
-                {
-                    string numStr = mangduoi.Text.TrimEnd('%');
-                    data1 = float.Parse(numStr) / 100;
-                    mangiua.Text = numStr + "% to dec =";
-                    mangduoi.Text = data1.ToString();
-                    isPercent = true;
-                }
-                // chua hien % thi chuyen sang %
-                else
+                try
                 {
                     data1 = float.Parse(mangduoi.Text);
-                    data2 = data1 * 100;
-                    mangiua.Text = data1.ToString() + " to % =";
-                    mangduoi.Text = data2.ToString() + "%";
-                    isPercent = true;
+
+                    // Chuyển số hiện tại thành phần trăm (chia cho 100)
+                    data2 = data1 / 100;
+                    mangiua.Text = data1.ToString() + " % =";
+                    mangduoi.Text = data2.ToString();
+                }
+                catch (FormatException)
+                {
+                    mangtren.Text = "Lỗi: Đầu vào không hợp lệ!";
                 }
             }
         }
+
+
+
+
         //button xoa 1 gia tri
         private void btnac_Click(object sender, EventArgs e)
         {
@@ -359,7 +405,9 @@ namespace Groupproject1
         private void btncongtru_Click(object sender, EventArgs e)
         {
             double value = double.Parse(mangduoi.Text);
-           double result = 1 / value;
+           value =  -value;
+            mangduoi.Text = value.ToString();
+
 
         }
 
@@ -370,8 +418,12 @@ namespace Groupproject1
 
         private void btn1chiax_Click(object sender, EventArgs e)
         {
-//mangduoi.Text = mangduoi.ToString();
-          // history.Text += $"1/{mangduoi} = {mangduoi}\n";
+            double value = double.Parse(mangduoi.Text);
+
+            double result = 1 / value;
+
+            mangduoi.Text = result.ToString();
+            history.Text += $"1/{value} = {result}\n";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
