@@ -275,6 +275,7 @@ namespace Groupproject1
                 mangduoi.Text = mangduoi.Text.Remove(mangduoi.Text.Length - 1);
             }
         }
+        // Thanh làm đoạn này 
         // button bang
         private void btnbang_Click(object sender, EventArgs e)
         {
