@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.history = new System.Windows.Forms.ListBox();
             this.btn1chiax = new System.Windows.Forms.Button();
             this.btncongtru = new System.Windows.Forms.Button();
@@ -77,6 +78,7 @@
             this.btn1chiax.TabIndex = 4;
             this.btn1chiax.Text = "1/x";
             this.btn1chiax.UseVisualStyleBackColor = true;
+            this.btn1chiax.Click += new System.EventHandler(this.btn1chiax_Click);
             // 
             // btncongtru
             // 
@@ -235,13 +237,14 @@
             // 
             // btnc
             // 
+            this.btnc.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnc.Location = new System.Drawing.Point(17, 372);
             this.btnc.Margin = new System.Windows.Forms.Padding(2);
             this.btnc.Name = "btnc";
             this.btnc.Size = new System.Drawing.Size(56, 43);
             this.btnc.TabIndex = 20;
             this.btnc.Text = "C";
-            this.btnc.UseVisualStyleBackColor = true;
+            this.btnc.UseVisualStyleBackColor = false;
             this.btnc.Click += new System.EventHandler(this.btnc_Click);
             // 
             // btn0
@@ -293,7 +296,7 @@
             this.mangtren.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mangtren.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangtren.Location = new System.Drawing.Point(2, 2);
-            this.mangtren.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mangtren.Margin = new System.Windows.Forms.Padding(2);
             this.mangtren.Multiline = true;
             this.mangtren.Name = "mangtren";
             this.mangtren.Size = new System.Drawing.Size(299, 27);
@@ -305,7 +308,7 @@
             this.mangiua.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mangiua.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangiua.Location = new System.Drawing.Point(2, 29);
-            this.mangiua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mangiua.Margin = new System.Windows.Forms.Padding(2);
             this.mangiua.Multiline = true;
             this.mangiua.Name = "mangiua";
             this.mangiua.Size = new System.Drawing.Size(299, 37);
@@ -317,7 +320,7 @@
             this.mangduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mangduoi.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangduoi.Location = new System.Drawing.Point(2, 69);
-            this.mangduoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mangduoi.Margin = new System.Windows.Forms.Padding(2);
             this.mangduoi.Multiline = true;
             this.mangduoi.Name = "mangduoi";
             this.mangduoi.Size = new System.Drawing.Size(299, 32);
@@ -372,7 +375,7 @@
             // 
             // btnac
             // 
-            this.btnac.BackgroundImage = global::Groupproject1.Properties.Resources.backspace_icon_152920;
+            this.btnac.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnac.BackgroundImage")));
             this.btnac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnac.Location = new System.Drawing.Point(239, 139);
             this.btnac.Margin = new System.Windows.Forms.Padding(2);

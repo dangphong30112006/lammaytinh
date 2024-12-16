@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Internal.WinApi.Windows.UI.Notifications;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -349,6 +350,7 @@ namespace Groupproject1
             isNegative = false;
         }
         //button xoá lịch sử
+
         private void button21_Click(object sender, EventArgs e)
         {
             history.Items.Clear();
@@ -356,6 +358,8 @@ namespace Groupproject1
         //button chuyen cong tru
         private void btncongtru_Click(object sender, EventArgs e)
         {
+            double value = double.Parse(mangduoi.Text);
+           double result = 1 / value;
 
         }
 
@@ -363,6 +367,13 @@ namespace Groupproject1
         {          
                    
         }
+
+        private void btn1chiax_Click(object sender, EventArgs e)
+        {
+//mangduoi.Text = mangduoi.ToString();
+          // history.Text += $"1/{mangduoi} = {mangduoi}\n";
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
